@@ -11,3 +11,4 @@ echo "<br>";
 var_dump($chd); //vardump tell us datatype
 echo "<br>";
 var_dump($ambala);
+?>
