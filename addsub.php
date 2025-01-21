@@ -3,15 +3,28 @@ if(!empty($_POST["a"]) and !empty($_POST["b"]))
 {
     $ist=$_POST["a"];
     $sec=$_POST["b"];
-    if(!empty($_POST["sum"]))
+    $operation=!empty($_POST['sum'])? 'sum' :(!empty($_POST['sub'])? 'sub':null);
+    switch($operation)
     {
-        $ans=$ist+$sec;
-        $result="Addition is $ans";
+        case 'sum':
+            {
+                $ans=$ist+$sec;
+                $result="Your Addition is $ans";
+                break;
+            }
+            case 'sub':
+                {
+                  $ans=$ist=$sec;
+                  $result="your subtraction is $ans";
+                  break;  
+                }
+                default:
+                {
+                    $result="Plz click on button";
+                }
+
     }
-    elseif($_POST["sub"]){
-        $ans=$ist-$sec;
-        $result="subtraction is $ans";
-    }
+   
 }
 
 ?>
@@ -28,12 +41,13 @@ if(!empty($_POST["a"]) and !empty($_POST["b"]))
 <body>
     <center>
 
-        <h1>Subtraction</h1>
+        <h1>Mathmatic calculation</h1>
         <form action="addsub.php" method="post">
         Enter your first value<input type="number" name="a" required><br><br>
         Enter your second value<input type="number" name="b" required><br><br>
         <input type="submit" value="Add now" name="sum"/> &nbsp;&nbsp;
         <input type="submit" value="Sub now" name="sub"/> 
+        <input type="submit" value="Anythink elsw" name="jk"/> 
 
 </form>
 
