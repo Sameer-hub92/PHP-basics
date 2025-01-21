@@ -1,12 +1,15 @@
 <?php
-$a=0;
+$a=100;
 
 if(!empty($a))
 {
-include "message1.php";
+require "messge1.php";
 }
 else
 {
-    include "message2.php";
+    include "message2.php";//hm include ko khi v likh skte h bina extension file 
 }
+
+    echo "My name is sameer"
+
 ?>
