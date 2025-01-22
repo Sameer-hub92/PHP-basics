@@ -14,7 +14,7 @@ if(!empty($_POST["a"]) and !empty($_POST["b"]))
             }
             case 'sub':
                 {
-                  $ans=$ist=$sec;
+                  $ans=$ist-$sec;
                   $result="your subtraction is $ans";
                   break;  
                 }
