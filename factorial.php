@@ -4,11 +4,12 @@ if(!empty($_POST["n"]))
 {
     $n=$_POST["n"];
     $factorial=1;
-    for($i=1;$i<=$n;$i++)
-    {
-        $factorial *= $i;
-    }
-    echo "$factorial"
+    
+for ($i = 1; $i <= $n; $i++) {
+    $factorial=$factorial* $i;
+}
+echo "Factorial of $n is $factorial";
+
 }
 ?>
 

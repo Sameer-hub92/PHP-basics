@@ -3,12 +3,22 @@
 if(!empty($_POST["n"]))
 {
     $n=$_POST["n"];
-    for($i=0;$i<$n;$i++)
-    {
-        for($j=0;$j<=$i;$j++)
+    // for($i=0;$i<$n;$i++)
+    // {
+        
+    //     for($j=0;$j<$i;$j++)   
 
+    //     {
+    //     echo "$j";
+    //     }
+    //     echo "<br>";
+    // }
+
+    for($i=$n;$i>1;$i--)
+    {
+        for($j=$n;$j>$i;$j++)
         {
-        echo "1";
+            echo "*";
         }
         echo "<br>";
     }
